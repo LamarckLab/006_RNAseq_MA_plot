@@ -13,7 +13,7 @@ library(scales)
 library(latex2exp)
 
 # 读入数据
-degdata <- fread("C:/Users/Lamarck/Desktop/MA_plot.csv")
+degdata <- fread("C:/Users/Lamarck/Desktop/MA_plot_data.csv")
 
 # 将padj列中NA值替换为1
 degdata[is.na(padj), padj := 1][]
