@@ -1,6 +1,6 @@
 ##### Load packages #####
-install.packages("tidyverse")
-install.packages("latex2exp")
+# install.packages("tidyverse")
+# install.packages("latex2exp")
 
 library(tidyverse)
 library(magrittr)
@@ -58,4 +58,3 @@ ggplot(degdata, aes(x = baseMean, y = log2FoldChange)) +
     panel.background = element_blank(),
     panel.grid = element_blank(),
     axis.line = element_line())
-
