@@ -23,7 +23,7 @@ degdata[, baseMean := log2(baseMean)][]
 
 # MA图的绘制
 degdata[, type := "ns"][]  # 初始化所有基因类型为"ns"
-degdata[log2FoldChange > 1 & padj < 0.1, type := "up"][log2FoldChange < -1 & padj < 0.1, type := "down"][]  #  标记上调基因和下调基因
+degdata[log2FoldChange > 1 & pvalue < 0.05, type := "up"][log2FoldChange < -1 & pvalue < 0.05, type := "down"][]  #  标记上调基因和下调基因
 
 # 筛选 logFC 最高的 5 个上调基因
 upGenes <- degdata[type == "up"][order(log2FoldChange, decreasing = TRUE)][1:5]
