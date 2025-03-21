@@ -11,9 +11,6 @@ library(latex2exp)
 ##### 读入数据 #####
 degdata <- fread("C:/Users/Lamarck/Desktop/MA_plot_data.csv")
 
-# 将 padj 列中 NA 值替换为 1
-degdata[is.na(padj), padj := 1][]
-
 # 对 baseMean 列取对数变换（以 2 为底）
 degdata[, baseMean := log2(baseMean)][]
 
