@@ -1,11 +1,8 @@
 ##### 加载所需包 #####
 library(tidyverse)
-library(magrittr)
 library(glue)
 library(data.table)
-library(ggplot2)
 library(ggsci)
-library(scales)
 library(latex2exp)
 
 ##### 读入数据 #####
